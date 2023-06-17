@@ -13,8 +13,8 @@ function! s:complete(arg,line,pos) abort
   return join(sort(luaeval('vim.tbl_keys(require("lizard.providers").providers)')), "\n")
 endfunction
 
-command! -nargs=* -complete=custom,s:complete Trouble lua require'lizard'.open(<f-args>)
-command! -nargs=* -complete=custom,s:complete TroubleToggle lua require'lizard'.toggle(<f-args>)
+command! -nargs=* -complete=custom,s:complete Lizard lua require'lizard'.open(<f-args>)
+command! -nargs=* -complete=custom,s:complete LizardToggle lua require'lizard'.toggle(<f-args>)
 command! TroubleClose lua require'lizard'.close()
 command! TroubleRefresh lua require'lizard'.refresh()
 
