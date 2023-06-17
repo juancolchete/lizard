@@ -35,7 +35,7 @@ end
 
 
 function Lizard.open(...)
-  vim.cmd("wincmd " .. "K")
+  vim.cmd("wincmd K")
 end
 
 
