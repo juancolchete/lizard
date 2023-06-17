@@ -1,15 +1,8 @@
-local M = {}
+local Lizard = {}
 
-function M.setup()
-    -- Define the command
-    vim.cmd([[command! -nargs=* Lizard lua require('lizard').execute_lizard(<f-args>)]])
-
-    -- Define the function to be executed
-    function M.execute_lizard(args)
-        print("Executing Lizard command with arguments:", args)
-        -- Your custom logic here
-    end
+if view and action == "on_win_enter" then
+    print("Hello World")
 end
 
-return M
+return Lizard
 
