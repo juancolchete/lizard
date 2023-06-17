@@ -35,7 +35,7 @@ end
 
 
 function Lizard.open(...)
-  vim.cmd("wincmd " .. (pos[config.options.position] or "K"))
+  vim.cmd("wincmd " .. "K")
 end
 
 
