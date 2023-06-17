@@ -25,7 +25,7 @@ local function create_win()
   -- It's not necessary but it is good practice to set custom filetype.
   -- This allows users to create their own autocommand or colorschemes on filetype.
   -- and prevent collisions with other plugins.
-  vim.api.nvim_buf_set_option(buf, 'filetype', 'nvim-oldfile')
+  vim.api.nvim_buf_set_option(buf, 'filetype', 'Lizard')
 
   -- For better UX we will turn off line wrap and turn on current line highlight.
   vim.api.nvim_win_set_option(win, 'wrap', false)
@@ -34,7 +34,11 @@ end
 
 
 function Lizard.open(...)
-    create_win()
+    buffer1 = vim.api.nvim_create_buf(false, true)
+    window1 = vim.api.nvim_open_win(buffer1, true, {
+        style="minimal", relative='editor',
+        row=3, col=3, width=30, height=9, border='single'
+    })
 end
 
 
