@@ -35,8 +35,7 @@ end
 
 
 function Lizard.open(...)
-  local opts = get_opts(...)
-  view = View.create(opts)
+  vim.cmd("wincmd " .. (pos[config.options.position] or "K"))
 end
 
 
