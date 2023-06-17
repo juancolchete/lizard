@@ -2,7 +2,7 @@ local M = {}
 
 function M.setup()
     -- Define the command
-    vim.cmd([[command! -nargs=* Lizard lua require('myplugin').execute_lizard(<f-args>)]])
+    vim.cmd([[command! -nargs=* Lizard lua require('lizard').execute_lizard(<f-args>)]])
 
     -- Define the function to be executed
     function M.execute_lizard(args)
