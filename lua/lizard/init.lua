@@ -35,7 +35,7 @@ end
 
 
 function Lizard.open(...)
-  vim.cmd("wincmd K")
+  vim.api.nvim_win_set_height(100, 100)
 end
 
 
