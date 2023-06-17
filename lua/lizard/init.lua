@@ -63,8 +63,6 @@ local function create_win()
   -- For better UX we will turn off line wrap and turn on current line highlight.
   vim.api.nvim_win_set_option(win, 'wrap', false)
   vim.api.nvim_win_set_option(win, 'cursorline', true)
-
-  set_mappings() -- At end we will set mappings for our navigation.
 end
 
 
