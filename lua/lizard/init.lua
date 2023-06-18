@@ -1,7 +1,8 @@
 local Lizard = {}
 
-local drawRaw = 
-[[              ____...---...___
+local drawRaw =
+[[            [COLCHETE DAO]
+              ____...---...___
 ___.....---"""        .       ""--..____
      .                  .            .
  .             _.--._       /|
