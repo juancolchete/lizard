@@ -24,6 +24,7 @@ function str_split (inputstr, sep)
         local t={}
         local i = 0
         for str in string.gmatch(inputstr, "([^"..sep.."]+)") do
+          print(str)
           t[i] = str;
           i = i + 1
         end
