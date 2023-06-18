@@ -33,7 +33,7 @@ end
 function Lizard.open(...)
   local buffer1 = vim.api.nvim_create_buf(false, true)
   local draw = str_split(drawRaw,"\n")
-  for i in string.gmatch(drawRaw, "\n") do
+  for i in string.gmatch(drawRaw, "%S\n") do
    print(i)
   end
   --for line in draw do
