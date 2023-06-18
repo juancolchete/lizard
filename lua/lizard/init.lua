@@ -6,6 +6,7 @@ function Lizard.open(...)
         style="minimal", relative='editor',
         row=3, col=50, width=50, height=25, border='single'
     })
+  vim.api.nvim_command(':e assets/lizard.txt')
 end
 
 
