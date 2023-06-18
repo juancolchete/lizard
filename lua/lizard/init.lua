@@ -31,6 +31,7 @@ end
 function Lizard.open(...)
   local buffer1 = vim.api.nvim_create_buf(false, true)
   local draw = str_split(drawRaw,"\n")
+  print(draw)
   for line in draw do
     print(line)
     --vim.api.nvim_buf_set_lines(buffer1, 0, -1, true, {line})
