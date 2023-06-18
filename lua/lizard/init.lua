@@ -6,7 +6,7 @@ function Lizard.open(...)
         style="minimal", relative='editor',
         row=3, col=50, width=200, height=50, border='single'
     })
-  vim.api.nvim_out_write([[
+  vim.api.nvim_buf_set_lines(buf, 0, -1, true, [[
                 ____...---...___
 ___.....---"""        .       ""--..____
      .                  .            .
@@ -22,7 +22,9 @@ ___.....---"""        .       ""--..____
           .'  `.    .'  `.
           |/\/\|    |/\/\|
 ]])
+ 
 end
+
 
 
 return Lizard
