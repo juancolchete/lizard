@@ -18,6 +18,7 @@ ___.....---"""        .       ""--..____
 ]]
 
 function Lizard.open(...)
+  print(draw)
   local buffer1 = vim.api.nvim_create_buf(false, true)
   for line in draw do
     print(line)
