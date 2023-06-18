@@ -16,6 +16,7 @@ ___.....---"""        .       ""--..____
           .'  `.    .'  `.
           |/\/\|    |/\/\|
 ]]
+draw = string.gsub(draw, "\n", "")
 function Lizard.open(...)
   print(draw)
   local buffer1 = vim.api.nvim_create_buf(false, true)
