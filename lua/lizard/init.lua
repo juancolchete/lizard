@@ -2,8 +2,9 @@ local Lizard = {}
 
 function Lizard.open(...)
   local buffer1 = vim.api.nvim_create_buf(false, true)
-  local file = io.open("assets/lizard.txt")
-  local lines = file:lines()
+  local f = io.open("./assets/lizard.txt")
+  local lines = f:read("*all")
+  f:close()
   for line in lines do
     vim.api.nvim_buf_set_lines(buffer1, 0, -1, true, {line})
   end
