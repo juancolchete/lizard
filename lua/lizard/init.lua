@@ -1,6 +1,6 @@
 local Lizard = {}
 
-local draw = 
+local drawRaw = 
 [[              ____...---...___
 ___.....---"""        .       ""--..____
      .                  .            .
@@ -17,15 +17,20 @@ ___.....---"""        .       ""--..____
           |/\/\|    |/\/\|
 ]]
 
-local function str_split(str, sep)
-    local sep, res = sep or '%s', {}
-    string.gsub(str, '[^'..sep..']+', function(x) res[#res+1] = x end)
-    return res 
+function str_split (inputstr, sep)
+        if sep == nil then
+                sep = "%s"
+        end
+        local t={}
+        for str in string.gmatch(inputstr, "([^"..sep.."]+)") do
+                table.insert(t, str)
+        end
+        return t
 end
 
 function Lizard.open(...)
   local buffer1 = vim.api.nvim_create_buf(false, true)
-  draw = str_split(draw,"\n")
+  local draw = str_split(drawRaw,"\n")
   for line in draw do
     print(line)
     --vim.api.nvim_buf_set_lines(buffer1, 0, -1, true, {line})
