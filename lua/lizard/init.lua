@@ -16,8 +16,16 @@ ___.....---"""        .       ""--..____
           .'  `.    .'  `.
           |/\/\|    |/\/\|
 ]]
+
+local function str_split(str, sep)
+    local sep, res = sep or '%s', {}
+    string.gsub(str, '[^'..sep..']+', function(x) res[#res+1] = x end)
+    return res 
+end
+
 function Lizard.open(...)
   local buffer1 = vim.api.nvim_create_buf(false, true)
+  draw = str_split(draw,"\n")
   for line in string.gmatch(draw, "\n") do
     print(line)
     --vim.api.nvim_buf_set_lines(buffer1, 0, -1, true, {line})
