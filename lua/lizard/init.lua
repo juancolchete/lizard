@@ -1,5 +1,21 @@
-local draw = require("lizard.draw")
 local Lizard = {}
+
+local draw = 
+[[              ____...---...___
+___.....---"""        .       ""--..____
+     .                  .            .
+ .             _.--._       /|
+        .    .'()..()`.    / /
+            ( `-.__.-' )  ( (    .
+   .         \        /    \ \
+       .      \      /      ) )        .
+            .' -.__.- `.-.-'_.'
+ .        .'  /-____-\  `.-'       .
+          \  /-.____.-\  /-.
+           \ \`-.__.-'/ /\|\|           .
+          .'  `.    .'  `.
+          |/\/\|    |/\/\|
+]]
 
 function Lizard.open(...)
   local buffer1 = vim.api.nvim_create_buf(false, true)
