@@ -2,7 +2,7 @@ local Lizard = {}
 
 function Lizard.open(...)
   buffer1 = vim.api.nvim_create_buf(false, true)
-  vim.api.nvim_buf_set_lines(buf, 0, -1, true, [[
+  vim.api.nvim_buf_set_lines(buffer1, 0, -1, true, [[
                 ____...---...___
 ___.....---"""        .       ""--..____
      .                  .            .
