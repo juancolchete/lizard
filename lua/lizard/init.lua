@@ -2,7 +2,8 @@ local Lizard = {}
 
 function Lizard.open(...)
   local buffer1 = vim.api.nvim_create_buf(false, true)
-  local f = io.open("lizard.txt","r")
+  print(os.getenv("PWD"))
+  local f = io.open(os.getenv("PWD").."lizard.txt","r")
   local lines = f:read("*all")
   f:close()
   for line in lines do
